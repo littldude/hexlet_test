@@ -1,0 +1,226 @@
+$dark: #000000;
+$light: #ffffff;
+$primary: #0d6efd;
+@font-face {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/Geometria-Heavy.woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Geometria-Bold.woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Geometria-Medium.woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Geometria.woff');
+    font-display: swap;
+}
+body {
+    color: $dark;
+    font-family: 'Geometria';
+    font-weight: 400;
+}
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    height: 55px;
+    background-color: $light;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+    &__nav {
+        margin-left: auto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__logo {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 27px;
+    }
+}
+.nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    &:hover {
+        opacity: .6;
+        transition: .2s;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #1a669c;
+        }
+    }
+}
+.title {
+    font-size: 42px;
+    line-height: 46px;
+    font-weight: 900;
+}
+.subtitle {
+    font-size: 24px;
+    font-weight: 900;
+}
+.text {
+    font-size: 18px;
+    line-height: 1.55;
+    &--bold {
+        font-weight: 700;
+    }
+}
+.mentor {
+    padding: 130px 0 90px 0;
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__inner {
+        margin-top: 20px;
+    }
+    &__item {
+        display: flex;
+        &::before {
+            font-family: "FontAwesome";
+            display: flex;
+            flex: 0 0 auto;
+            margin-right: 20px;
+            font-size: 40px;
+            color: $primary;
+        }
+        &:nth-child(1) {
+            &::before {
+                content: "\f2b5";
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                content: "\f059";
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                content: "\f5fc";
+            }
+        }
+        &:nth-child(4) {
+            &::before {
+                content: "\f0ae";
+            }
+        }
+    }
+}
+.theory {
+    padding: 90px 0 90px 0;
+}
+.feedback {
+    padding: 90px 0 90px 0;
+    &__link {
+        color: $primary;
+        &:hover {
+            color: $dark;
+            transition: .2s linear;
+            text-decoration: none;
+        }
+    }
+}
+.form-control {
+    height: 50px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+    font-family: 'Geometria';
+    font-weight: 500;
+    font-size: 20px;
+}
+.button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-family: 'Geometria';
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: none;
+}
+.footer {
+    background-color: #f5f4f0;
+    padding: 90px 0;
+    &__item {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: $dark;
+        text-decoration: none;
+        color: $light;
+        font-size: 30px;
+        &:hover {
+            background-color: $primary;
+            color: $light;
+            transition: .2s linear;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+@media (max-width: 568px) {
+    .title {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .mentor {
+        padding: 90px 0 50px 0;
+        &__item {
+            &::before {
+                margin-right: 10px;
+                font-size: 25px;
+            }
+        }
+    }
+    .theory {
+        padding: 50px 0;
+    }
+    small {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+@media (max-width: 414px) {
+    .footer {
+        &__item {
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+        }
+    }
+}

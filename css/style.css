@@ -1,0 +1,253 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Geometria-Heavy.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Geometria-Bold.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Geometria-Medium.woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Geometria.woff");
+  font-display: swap;
+}
+body {
+  color: #000000;
+  font-family: "Geometria";
+  font-weight: 400;
+}
+
+.page {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  height: 55px;
+  background-color: #ffffff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
+}
+.header__nav {
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header__logo {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+}
+
+.nav-link {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.nav-link:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.nav-link:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #1a669c;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.55;
+}
+.text--bold {
+  font-weight: 700;
+}
+
+.mentor {
+  padding: 130px 0 90px 0;
+}
+.mentor__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mentor__inner {
+  margin-top: 20px;
+}
+.mentor__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mentor__item::before {
+  font-family: "FontAwesome";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 20px;
+  font-size: 40px;
+  color: #0d6efd;
+}
+.mentor__item:nth-child(1)::before {
+  content: "";
+}
+.mentor__item:nth-child(2)::before {
+  content: "";
+}
+.mentor__item:nth-child(3)::before {
+  content: "";
+}
+.mentor__item:nth-child(4)::before {
+  content: "";
+}
+
+.theory {
+  padding: 90px 0 90px 0;
+}
+
+.feedback {
+  padding: 90px 0 90px 0;
+}
+.feedback__link {
+  color: #0d6efd;
+}
+.feedback__link:hover {
+  color: #000000;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  text-decoration: none;
+}
+
+.form-control {
+  height: 50px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 50px;
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: none;
+}
+
+.footer {
+  background-color: #f5f4f0;
+  padding: 90px 0;
+}
+.footer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+}
+.footer__item:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.footer__item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 568px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .mentor {
+    padding: 90px 0 50px 0;
+  }
+  .mentor__item::before {
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  .theory {
+    padding: 50px 0;
+  }
+
+  small {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 414px) {
+  .footer__item {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+}
